@@ -1,3 +1,4 @@
+import defaultTheme from "tailwindcss/defaultTheme"
 import { pokemonColors } from "./src/configs/colors"
 
 /** @type {import('tailwindcss').Config} */
@@ -12,6 +13,10 @@ export default {
         ...pokemonColors
       }
     },
+    fontFamily: {
+      ...defaultTheme.fontFamily,
+      sans: ["Poppins", ...defaultTheme.fontFamily.sans],
+    }
   },
   plugins: [],
 }
